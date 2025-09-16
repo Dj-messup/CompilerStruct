@@ -31,7 +31,7 @@ The language supports:
 
 ### Examples
 
-✅ Accepts:
+Accepts:
 - `0`
 - `+0`
 - `-12`
@@ -40,7 +40,7 @@ The language supports:
 - `12e3`
 - `12.3e-4`
 
-❌ Rejects:
+Rejects:
 - `e10` (missing digits before exponent)
 - `.e10` (missing digits between `.` and `e`)
 - `--1` (double sign not allowed)
