@@ -45,3 +45,7 @@ Rejects:
 - `.e10` (missing digits between `.` and `e`)
 - `--1` (double sign not allowed)
 - `3.14.15` (multiple decimal points)
+
+This grammar corresponds directly to the FSM diagram from class.  
+The parser’s states map to the FSM nodes, and the **accept states** are those that end after a valid integer, fractional, or exponential number.
+
