@@ -1,6 +1,44 @@
 # CompilerStruct
 
-## Grammar Specification
+## Goal: 
+# Semester Project Proposal
+
+## Language Piece: Arithmetic Expressions
+
+We plan to implement a parser for **arithmetic expressions**.  
+This part of a language includes recursive structure, operator precedence, and parentheses.
+
+### Features
+- Integer literals
+- Addition, subtraction, multiplication, division
+- Parentheses for grouping
+
+### BNF Grammar
+<Expr>   ::= <Expr> "+" <Term>
+           | <Expr> "-" <Term>
+           | <Term>
+
+<Term>   ::= <Term> "*" <Factor>
+           | <Term> "/" <Factor>
+           | <Factor>
+
+<Factor> ::= "(" <Expr> ")"
+           | <Number>
+
+<Number> ::= <Digit> <Number> | <Digit>
+<Digit>  ::= "0" | "1" | "2" | "3" | "4"
+           | "5" | "6" | "7" | "8" | "9"
+
+### Recursive Element
+The grammar is recursive because:
+- `<Expr>` is defined in terms of itself (`<Expr> "+" <Term>`).  
+- `<Term>` is also defined in terms of itself (`<Term> "*" <Factor>`).  
+This allows expressions of arbitrary length, such as `1 + 2 * (3 - 4) / 5`.
+
+
+## assign 1
+
+### Grammar Specification
 
 This project implements a parser for **floating point numbers** based on the FSM diagram from class.  
 The language supports:
